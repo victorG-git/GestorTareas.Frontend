@@ -10,15 +10,17 @@ rel="stylesheet">
 
 <header>
     <nav class="main">
-        <h2>Proyecto Tareas</h2>
+      <div tarea="header">
+         <h2>Proyecto Tareas</h2>
          <li><a href="Inicio">Inicio</a></li>
          <li><a href="Usuarios">Usuarios</a></li>
          <li><a href="Informacion">Informacion</a></li>
+      </div>
     </nav>
 </header>
  <main>
-
-    <section class="lista-tareas">
+  <div users="usuarios">
+       <section class="lista-tareas">
 
       <article class="tarea1">
         <h3>Diseñar paguina Web</h3>
@@ -50,12 +52,55 @@ rel="stylesheet">
         <p><strong>Prioridad: </strong>PrioridadMaxima</p>
       </article>
     </section>
-
-    <section class="section.login-container">
+  </div>
+  <div login="login">
+     <section class="section.login-container">
         <h3>Loging</h3>
         <p><strong>Nombre: </strong></p>
         <p><strong>Email: </strong></p>
         <p><strong>Contraseña: </strong></p>
         <button><p>Registrarse</p></button>
     </section>
+  </div>
+    <style>
+              
+        header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--color-primario);
+        color: rgb(252, 252, 252);
+        }
+
+        div {
+           display: flex;
+        }
+
+        .tarea-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        }
+
+        .lista-tareas {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        }
+
+        .tarea-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.75rem;
+        }
+
+        .tarea-acciones {
+        display: flex;
+        gap: 0.5rem;
+        }
+    </style>
 </main>
+
